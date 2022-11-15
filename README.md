@@ -7,7 +7,15 @@ Feita com node.js e express, ela servirá como o back-end de uma aplicação de 
 Se desejar executar o projeto localmente, crie um arquivo "keys.ts" dentro da pasta "src", com o seguinte conteúdo:
 
 ```typescript
-// apenas para quem estiver usando o atlas para a conexão com o mongodb. Deve trocar o "Vitor-Tx" no index.ts para seu usuário do projeto.
+/*
+ Apenas para quem estiver usando o atlas para a conexão com o mongodb.
+ Deve trocar o "Vitor-Tx" no index.ts para seu usuário do projeto.
+
+ Caso esteja usando docker ou o mongodb local, apenas exclua os imports
+ relacionados no index.ts e insira o link correto na chamada de conexão
+ do mongoose.
+
+*/
 
 //senha do usuário do projeto
 export const password = "password";
