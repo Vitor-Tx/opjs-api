@@ -22,7 +22,8 @@ mongoose.connect(`mongodb+srv://Vitor-Tx:${password}@${cluster}.mongodb.net/?ret
     });
 
   })
-  .catch(() => {
+  .catch((error) => {
+    console.log(error);
     console.log("erro ao conectar com o mongodb!");
   });
 
