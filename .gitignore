@@ -13,3 +13,4 @@
 node_modules/*
 dist/*
 keys.ts
+docker-compose.yml
