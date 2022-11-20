@@ -4,24 +4,21 @@ API feita durante o minicurso "O poder do JavaScript", do /maateusilva.
 
 Feita com node.js e express, ela servirá como o back-end de uma aplicação de gerenciamento para pizzarias, a qual será desenvolvida para web e mobile, utilizando React e React Native.
 
-Se desejar executar o projeto localmente, crie um arquivo "keys.ts" dentro da pasta raiz, com o seguinte conteúdo:
+Se desejar executar o projeto localmente, você possui várias opções:
+- utilizando docker para rodar o mongodb localmente;
+- utilizando uma instância de um projeto no atlas do mongodb;
+- etc;
+
+O projeto atualmente está configurado para rodar utilizando docker. Se quiser usar o atlas, você precisa descomentar essas seções do código da index.ts, na pasta /src(e comentar as equivalentes):
 
 ```typescript
-/*
- Apenas para quem estiver usando o atlas para a conexão com o mongodb.
- Deve trocar o "Vitor-Tx" no index.ts para seu usuário do projeto.
 
- Caso esteja usando docker ou o mongodb local, apenas exclua os imports
- relacionados no index.ts e insira o link correto na chamada de conexão
- do mongoose.
+//...
 
-*/
-
-//senha do usuário do projeto
-export const password = "password";
-//nome do cluster usado e o código
-export const cluster = "clusterName.code";
-
+//mongoose.connect(`mongodb+srv://<seu-usuario>:<sua-senha>@$<seu-cluster>.mongodb.net/?retryWrites=true&w=majority`) //caso for usar atlas
+mongoose
+  .connect("mongodb://localhost:27017") //usando docker
+//...
 ```
 
 ## Tecnologias utilizadas
@@ -29,6 +26,8 @@ export const cluster = "clusterName.code";
 - TypeScript
 - Node.js
 - Express
+- Docker
 - Mongodb
+- socket.io
 - ESLint
 - etc
