@@ -5,8 +5,9 @@ API feita durante o minicurso "O poder do JavaScript", do /maateusilva.
 Feita com node.js e express, ela servirá como o back-end de uma aplicação de gerenciamento para pizzarias, a qual será desenvolvida para web e mobile, utilizando React e React Native.
 
 Os repositórios para as aplicações web e mobile podem ser acessados por esses links:
-- [OPJS-APP](https://github.com/Vitor-Tx/opjs-app)
 - [OPJS-FRONT](https://github.com/Vitor-Tx/opjs-front-end)
+- [OPJS-APP](https://github.com/Vitor-Tx/opjs-app)
+
 
 Se desejar executar o projeto localmente, você possui várias opções:
 - utilizando docker para rodar o mongodb localmente;
